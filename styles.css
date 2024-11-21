@@ -1,0 +1,192 @@
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font untuk seluruh halaman */
+body {
+  font-family: "Roboto", sans-serif; /* Menggunakan font Roboto dari Google Fonts */
+  background-color: #121212; /* Latar belakang gelap untuk seluruh halaman */
+  color: #f0f0f0; /* Warna teks terang untuk kontras */
+}
+
+/* Menambahkan outline hitam pada teks */
+h1,
+h2,
+h3,
+p,
+a,
+li,
+.menu-item h3 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.7);
+  /* Menambahkan bayangan untuk menciptakan efek outline */
+}
+
+/* Navbar */
+nav {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparan hitam untuk navbar */
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow hitam untuk efek */
+}
+
+nav a {
+  color: #d2691e; /* Warna oranye tua untuk tautan */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #b22222; /* Merah terang untuk hover */
+}
+
+/* Hero Section dengan gambar makanan dan latar belakang gelap */
+.hero {
+  background: url("https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center/cover; /* Gambar makanan */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Latar belakang gelap dengan transparansi */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem; /* Ukuran font lebih besar untuk efek tegas */
+  font-weight: bold;
+  color: #d2691e; /* Oranye tua pada teks */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Outline hitam */
+}
+
+/* Menu Section dengan gambar makanan sebagai latar belakang */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: url("https://images.unsplash.com/photo-1488992783499-418eb1f62d08?q=80&w=1589&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center/cover; /* Gambar menu makanan */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Latar belakang gelap untuk kontras gambar */
+  background-size: cover;
+}
+
+.menu-item {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Semi-transparan hitam agar teks lebih terlihat */
+  border-radius: 10px;
+  margin: 15px;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow gelap */
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  background-color: #b22222; /* Merah terang saat hover */
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  font-family: "Roboto", sans-serif; /* Menggunakan font Roboto untuk judul menu */
+  font-size: 1.8rem; /* Ukuran lebih besar agar menarik perhatian */
+  margin-top: 1rem;
+  color: #d2691e; /* Oranye tua pada judul menu */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Outline hitam */
+}
+
+.menu-item p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #ccc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Outline hitam pada teks */
+}
+
+/* Formulir Pemesanan dengan latar belakang gelap dan gambar */
+.order-form {
+  background: url("https://images.unsplash.com/photo-1695654390723-479197a8c4a3?q=80&w=1434&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center/cover; /* Gambar latar belakang untuk form pemesanan */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Latar belakang gelap dengan transparansi */
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+  width: 50%;
+  margin: 3rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-form input,
+.order-form select,
+.order-form button {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.order-form input,
+.order-form select {
+  background-color: #444; /* Warna input biru gelap */
+  color: #fff;
+}
+
+.order-form button {
+  background-color: #d2691e; /* Oranye tua untuk tombol */
+  color: white;
+  cursor: pointer;
+}
+
+.order-form button:hover {
+  background-color: #b22222; /* Merah lebih terang saat hover */
+}
+
+/* Pesan Sukses / Error */
+.success-message {
+  text-align: center;
+  color: #32cd32; /* Hijau untuk sukses */
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.error-message {
+  text-align: center;
+  color: #ff6347; /* Merah untuk pesan error */
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
