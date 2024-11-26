@@ -1,192 +1,187 @@
-/* Reset default margin dan padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-/* Font untuk seluruh halaman */
+/* General Styles */
 body {
-  font-family: "Roboto", sans-serif; /* Menggunakan font Roboto dari Google Fonts */
-  background-color: #121212; /* Latar belakang gelap untuk seluruh halaman */
-  color: #f0f0f0; /* Warna teks terang untuk kontras */
+  margin: 0;
+  font-family: "Montserrat", sans-serif; /* Font Montserrat */
+  background-color: #fce4ec; /* Pink yang menyenangkan */
+  color: #333333;
 }
 
-/* Menambahkan outline hitam pada teks */
-h1,
-h2,
-h3,
-p,
-a,
-li,
-.menu-item h3 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.7);
-  /* Menambahkan bayangan untuk menciptakan efek outline */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f48fb1; /* Pink lembut */
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-/* Navbar */
-nav {
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparan hitam untuk navbar */
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow hitam untuk efek */
-}
-
-nav a {
-  color: #d2691e; /* Warna oranye tua untuk tautan */
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 20px;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
-nav a:hover {
-  color: #b22222; /* Merah terang untuk hover */
-}
-
-/* Hero Section dengan gambar makanan dan latar belakang gelap */
-.hero {
-  background: url("https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat center center/cover; /* Gambar makanan */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Latar belakang gelap dengan transparansi */
-  height: 400px;
+.navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold untuk logo */
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f50057; /* Pink cerah untuk tulisan */
+  font-size: 1rem;
+  font-weight: 400; /* Regular */
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ffffff; /* Tulisan putih saat hover */
+  background-color: #ff80ab; /* Background cerah saat hover/focus */
+}
+
+.nav-links li a:active {
+  color: #ffffff;
+  background-color: #f50057; /* Highlight lebih cerah saat klik */
+}
+
+.home-section {
   text-align: center;
-  color: white;
+  padding: 10rem 2rem 5rem;
+  background: #f8bbd0; /* Warna pink muda */
+  animation: fadeIn 2s ease-in-out;
 }
 
-.hero h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 4rem; /* Ukuran font lebih besar untuk efek tegas */
-  font-weight: bold;
-  color: #d2691e; /* Oranye tua pada teks */
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Outline hitam */
+.home-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700; /* Bold untuk heading */
+  color: #000000; /* Pink cerah untuk tulisan */
 }
 
-/* Menu Section dengan gambar makanan sebagai latar belakang */
+.home-section p {
+  font-size: 1.25rem;
+  font-weight: 400; /* Regular untuk teks */
+  color: #000000; /* Pink cerah untuk teks */
+}
+
+.menu-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f50057; /* Pink cerah untuk heading */
+  font-weight: 700; /* Bold untuk heading */
+}
+
 .menu {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  padding: 2rem;
-  background: url("https://images.unsplash.com/photo-1488992783499-418eb1f62d08?q=80&w=1589&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat center center/cover; /* Gambar menu makanan */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Latar belakang gelap untuk kontras gambar */
-  background-size: cover;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .menu-item {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Semi-transparan hitam agar teks lebih terlihat */
-  border-radius: 10px;
-  margin: 15px;
-  width: 250px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow gelap */
-  transition: transform 0.3s ease;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-item:hover {
-  transform: scale(1.05);
-  background-color: #b22222; /* Merah terang saat hover */
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 .menu-item h3 {
-  font-family: "Roboto", sans-serif; /* Menggunakan font Roboto untuk judul menu */
-  font-size: 1.8rem; /* Ukuran lebih besar agar menarik perhatian */
-  margin-top: 1rem;
-  color: #d2691e; /* Oranye tua pada judul menu */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Outline hitam */
+  color: #f50057; /* Pink cerah untuk nama makanan */
+  font-size: 1.5rem;
+  font-weight: 700; /* Bold */
 }
 
-.menu-item p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: #ccc;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Outline hitam pada teks */
+.order-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f48fb1;
 }
 
-/* Formulir Pemesanan dengan latar belakang gelap dan gambar */
-.order-form {
-  background: url("https://images.unsplash.com/photo-1695654390723-479197a8c4a3?q=80&w=1434&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat center center/cover; /* Gambar latar belakang untuk form pemesanan */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.8
-  ); /* Latar belakang gelap dengan transparansi */
-  padding: 2rem;
-  margin-top: 3rem;
-  border-radius: 10px;
-  width: 50%;
-  margin: 3rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.order-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 700; /* Bold */
 }
 
-.order-form input,
-.order-form select,
-.order-form button {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 10px;
+.order-section button {
+  padding: 1rem 2rem;
+  background: #f50057; /* Pink cerah */
+  color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
-}
-
-.order-form input,
-.order-form select {
-  background-color: #444; /* Warna input biru gelap */
-  color: #fff;
-}
-
-.order-form button {
-  background-color: #d2691e; /* Oranye tua untuk tombol */
-  color: white;
+  font-size: 1.25rem;
+  font-weight: 700; /* Bold */
   cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.order-form button:hover {
-  background-color: #b22222; /* Merah lebih terang saat hover */
+.order-section button:hover {
+  background: #ff80ab; /* Background cerah saat hover */
+  transform: scale(1.1);
 }
 
-/* Pesan Sukses / Error */
-.success-message {
+footer {
   text-align: center;
-  color: #32cd32; /* Hijau untuk sukses */
-  font-size: 1.2rem;
-  margin-top: 20px;
+  padding: 1rem;
+  background: #2c3e50;
+  color: #ffffff;
+  font-weight: 400; /* Regular untuk footer */
 }
 
-.error-message {
-  text-align: center;
-  color: #ff6347; /* Merah untuk pesan error */
-  font-size: 1.2rem;
-  margin-top: 20px;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
